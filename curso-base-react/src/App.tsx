@@ -1,38 +1,31 @@
-import type React from "react"
+import type { ReactNode } from "react"
 
-interface ICardProps{
-  title : string
-  children: React.ReactNode
+interface Iprop{
+  title: string
+  children: ReactNode
 }
 
-const Card = (props : ICardProps) => {
+function Cap (props: Iprop){
   return(
-    <div style={{border: '1px solid black'}}>
-
-      <span>
-        title: {props.title}
-      </span>
-
-      <div>
-        {props.children}
-      </div>
-
-      <div>
-        footer
-      </div>
-
-    </div>
+    <>
+    <h1>
+    Titulo: {props.title}
+    </h1>
+    {props.children}
+    </>
   )
+
 }
+
 
 export function App() {
   return (
     <>
-      <h1>oi world</h1>
-      <p>Card:</p>
-      <Card title="hello moto">
-        vecna
-      </Card>
+
+       <Cap title="me friend ">
+        iae
+       </Cap>
+  
     </>
   )
 }
